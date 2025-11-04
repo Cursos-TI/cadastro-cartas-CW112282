@@ -1,10 +1,11 @@
 
 
 #include <stdio.h>
+#include <stdlib.h>
 
-// Estrutura para armazenar os dados de cada carta
+// Estrutura para armazenar os dados de uma carta
 typedef struct {
-    char estado[20];
+    char estado[30];
     char codigo[10];
     char cidade[30];
     int populacao;
@@ -13,6 +14,7 @@ typedef struct {
     int pontosTuristicos;
 } Carta;
 
+// Função para exibir os dados de uma carta
 void exibirCarta(Carta carta) {
     printf("Estado: %s\n", carta.estado);
     printf("Código: %s\n", carta.codigo);
@@ -24,8 +26,8 @@ void exibirCarta(Carta carta) {
 }
 
 int main() {
-    // Criando as cartas
-    Carta carta1 = {"Ceará", "001", "Fortaleza", 567900, 987.89, 7657678.90, 50};
+    // Criando cartas manualmente
+    Carta carta1 = {"Ceará", "001", "Fortaleza", 567900, 987.89, 765767890.00, 50};
     Carta carta2 = {"Distrito Federal", "002", "Brasília", 76940, 435.67, 76768.00, 20};
 
     // Exibindo as cartas
