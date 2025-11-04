@@ -1,31 +1,40 @@
+
+
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Função para identificar as informações das cartas.
+// Estrutura para armazenar os dados de cada carta
+typedef struct {
+    char estado[20];
+    char codigo[10];
+    char cidade[30];
+    int populacao;
+    float areaKm2;
+    float pib;
+    int pontosTuristicos;
+} Carta;
+
+void exibirCarta(Carta carta) {
+    printf("Estado: %s\n", carta.estado);
+    printf("Código: %s\n", carta.codigo);
+    printf("Cidade: %s\n", carta.cidade);
+    printf("População: %d\n", carta.populacao);
+    printf("Área (Km²): %.2f\n", carta.areaKm2);
+    printf("PIB: %.2f\n", carta.pib);
+    printf("Pontos Turísticos: %d\n\n", carta.pontosTuristicos);
+}
 
 int main() {
+    // Criando as cartas
+    Carta carta1 = {"Ceará", "001", "Fortaleza", 567900, 987.89, 7657678.90, 50};
+    Carta carta2 = {"Distrito Federal", "002", "Brasília", 76940, 435.67, 76768.00, 20};
 
-scanf("informações de cartas");
-  
-printf (Carta 1);
+    // Exibindo as cartas
+    printf("Cartas Super Trunfo:\n\n");
+    exibirCarta(carta1);
+    exibirCarta(carta2);
 
-    char ("estado ; ceará");
-    char ("código [10]") ;
-    char ("cidade [fortaleza]";
-    int ("população 567900");
-    float ("área em Km2 987898000");
-    float ("pib 76576789000");
-    int (" pontos turísticos [50]");
-    
-printf (Carta 2);
-    char ("estado;brasília");
-    char("código 12]")
-    char("cidade [distrito federal]")
-    int ("população 76940");
-    float("área em km2 435675000");
-    float("pib 7676800");
-    int("pontos turísticos [20]");
+    return 0;
+}
     
     
-return 0;
-} 
+
